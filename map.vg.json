@@ -48,9 +48,5 @@
         }
       ]
     },
-    {
-      "data": {"graticule": {"step": [10, 10]}},
-      "mark": {"type": "geoshape", "stroke": "lightgray", "strokeWidth": 0.5}
-    }
   ]
 }
