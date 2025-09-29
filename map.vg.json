@@ -45,7 +45,7 @@
           "lookup": "properties.name",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/state_counts.csv"
+              "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/state_counts_nomalized.csv"
             },
             "key": "state",
             "fields": ["total_count", "population"]
