@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Vehicle Registrations by State (Malaysia, 2025)",
+    "fontSize": 50,
+    "font": "Arial",
+    "fontWeight": "bold",
+    "color": "black"
+  },
+    "width": "container",
+    "height": "container",
+    "autosize": {
+    "type": "fit",
+    "contains": "padding"
+    },
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "ne_10m_admin_1_states_provinces.json",
+        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+      },
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1},
+      "encoding": {
+        "color": {
+          "field": "total_count",
+          "type": "quantitative",
+          "scale": {"scheme": "blues"}
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State"},
+          {"field": "total_count", "type": "quantitative", "title": "Registrations"}
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {"url": "state_counts.csv"},
+            "key": "state",
+            "fields": ["total_count"]
+          }
+        }
+      ]
+    }
+  ]
+}
