@@ -15,13 +15,7 @@
     "contains": "padding"
   },
   "projection": {
-    "type": "mercator",
-    "fit": {
-      "data": {
-        "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/ne_10m_admin_1_states_provinces.json",
-        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
-      }
-    }
+    "type": "mercator"
   },
   "layer": [
     {
@@ -34,7 +28,11 @@
         "color": {
           "field": "registrations_per_1000",
           "type": "quantitative",
-          "scale": {"scheme": "blues"}
+            "scale": {
+            "domain": [0, 3.5],
+            "scheme": "blues",
+            "clamp": true
+            }
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "State"},
@@ -48,13 +46,13 @@
           "lookup": "properties.name",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/state_counts_normalized.csv"
+              "url": "state_counts_normalized.csv"
             },
             "key": "state",
             "fields": ["total_count", "population", "registrations_per_1000"]
           }
         }
       ]
-    },
+    }
   ]
 }
