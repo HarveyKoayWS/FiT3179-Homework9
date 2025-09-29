@@ -26,7 +26,7 @@
         "color": {
           "field": "registrations_per_1000",
           "type": "quantitative",
-          "scale": {"scheme": "OrRd"},
+          "scale": {"scheme": "blues"},
           "legend": {
             "title": "Registrations per 1,000 People",
             "titleFontSize": 14,
