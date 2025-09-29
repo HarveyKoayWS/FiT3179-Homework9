@@ -17,7 +17,7 @@
   "layer": [
     {
       "data": {
-        "url": "ne_10m_admin_1_states_provinces.json",
+        "url": "https://github.com/HarveyKoayWS/FiT3179-Homework9/blob/main/ne_10m_admin_1_states_provinces.json",
         "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
       },
       "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1},
@@ -36,7 +36,7 @@
         {
           "lookup": "properties.name",
           "from": {
-            "data": {"url": "state_counts.csv"},
+            "data": {"url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/state_counts.csv"},
             "key": "state",
             "fields": ["total_count"]
           }
