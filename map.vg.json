@@ -40,22 +40,18 @@
           {"field": "registrations_per_1000", "type": "quantitative", "title": "Registrations per 1,000"}
         ]
       },
-      "transform": [
-        {
-          "lookup": "properties.name",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/state_counts_normalized.csv"
-            },
-            "key": "state",
-            "fields": ["total_count", "population"]
-          }
-        },
-        {
-          "calculate": "datum.total_count / datum.population * 1000",
-          "as": "registrations_per_1000"
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/state_counts_normalized.csv"
+          },
+          "key": "state",
+          "fields": ["total_count", "population", "registrations_per_1000"]
         }
-      ]
+      }
+    ],
     },
     {
       "data": {"graticule": {"step": [10, 10]}},
