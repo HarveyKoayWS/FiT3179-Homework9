@@ -26,12 +26,7 @@
         "color": {
           "field": "registrations_per_1000",
           "type": "quantitative",
-          "scale": {"scheme": "blues"},
-          "legend": {
-            "title": "Registrations per 1,000 People",
-            "titleFontSize": 14,
-            "labelFontSize": 12
-          }
+          "scale": {"scheme": "blues"}
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "State"},
