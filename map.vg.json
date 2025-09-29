@@ -21,18 +21,21 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/HarveyKoayWS/FiT3179-Homework9/main/ne_10m_admin_1_states_provinces.json",
-        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_1_states_provinces"
+        }
       },
       "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1},
       "encoding": {
         "color": {
           "field": "registrations_per_1000",
           "type": "quantitative",
-            "scale": {
+          "scale": {
             "domain": [0, 3.5],
             "scheme": "blues",
             "clamp": true
-            }
+          }
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "State"},
